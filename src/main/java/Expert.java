@@ -47,6 +47,15 @@ public class Expert {
         }else{
             return Arrays.toString(myString.split(","));
         }
+    }
 
+    public static int calDigitSum(int number){
+        String numString = String.valueOf(number);
+        char[] c = numString.toCharArray();
+        int sum = 0;
+        for(int i = 0; i<c.length; i++){
+            sum+=Character.getNumericValue(c[i]);
+        }
+        return sum;
     }
 }

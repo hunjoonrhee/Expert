@@ -82,4 +82,16 @@ public class ExpertTest {
         assertEquals(Arrays.toString(expectedArray), actual);
     }
 
+    @Test
+    void calDigitSumTest(){
+        // GIVEN
+        int n = 11230;
+
+        // WHEN
+        int actual = Expert.calDigitSum(n);
+
+        // THEN
+        assertEquals(7, actual);
+    }
+
 }
