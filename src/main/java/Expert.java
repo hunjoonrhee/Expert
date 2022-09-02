@@ -1,4 +1,12 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Expert {
+
+    public static void main(String[] args) {
+
+    }
 
     public static String reverse(String string){
         String result = "";
@@ -14,7 +22,19 @@ public class Expert {
                 }
             }
         }
-
         return result;
+    }
+
+    public static String sortAsc(int[] intArray){
+        ArrayList<Integer> IntArray = new ArrayList<>();
+        for (int i = 0; i<intArray.length; i++){
+            IntArray.add(intArray[i]);
+        }
+        Collections.sort(IntArray);
+        int [] sortedIntArray = new int[IntArray.size()];
+        for (int i=0; i<IntArray.size(); i++){
+            sortedIntArray[i] = IntArray.get(i);
+        }
+        return Arrays.toString(sortedIntArray);
     }
 }
