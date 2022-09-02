@@ -37,4 +37,16 @@ public class Expert {
         }
         return Arrays.toString(sortedIntArray);
     }
+
+    public static String splitStringbyComma(String myString){
+
+        if(!myString.contains(",")){
+            String [] myStringArray = new String[1];
+            myStringArray[0] = myString;
+            return Arrays.toString(myStringArray);
+        }else{
+            return Arrays.toString(myString.split(","));
+        }
+
+    }
 }

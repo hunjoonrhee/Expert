@@ -56,5 +56,30 @@ public class ExpertTest {
         assertEquals(Arrays.toString(expectedArray), actual);
     }
 
+    @Test
+    void splitStringbyCommaTestforNoComma(){
+        // GIVEN
+        String myString = "Hallo";
+
+        // WHEN
+        String actual = Expert.splitStringbyComma(myString);
+
+        // THEN
+        String expectedArray[] = {myString};
+        assertEquals(Arrays.toString(expectedArray), actual);
+    }
+
+    @Test
+    void splitStringbyCommaTestforWithCommas(){
+        // GIVEN
+        String myString = "Hallo, Ich heiße Joon, wie geht es dir?";
+
+        // WHEN
+        String actual = Expert.splitStringbyComma(myString);
+
+        // THEN
+        String expectedArray[] = {"Hallo", " Ich heiße Joon", " wie geht es dir?"};
+        assertEquals(Arrays.toString(expectedArray), actual);
+    }
 
 }
